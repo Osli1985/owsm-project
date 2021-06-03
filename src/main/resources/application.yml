@@ -1,0 +1,9 @@
+springdoc:
+  packagesToScan: com.ingroupe.cms.eid.registry.controller
+  swagger-ui:
+    path: /swagger-ui.html
+
+server:
+  port: 9200
+  servlet:
+    context-path: /owsm-project
