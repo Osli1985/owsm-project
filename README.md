@@ -97,7 +97,9 @@ Kubectl:
 
 Kubectl get nodes
 
-Kubectl get pod
+Kubectl get podS
+Kubectl describe pod my-pod
+Kubectl create -f pod.yaml
 
 Kubectl get services
 
