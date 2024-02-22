@@ -116,3 +116,71 @@ Kubectl exec -it <pod_name> -- bin/bash
 Kubectl delete deployment <pod_name>
 
 Kubectl apply -f <file_config>
+
+Pods:
+pod-definition.yml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+
+spec:
+
+ReplicaSets: (new Replication Controller)
+Replication controller -> High Availability / Load Balancing / Scaling
+
+rc-definition.yml
+
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: front-end
+
+spec:
+  template: (for POD)
+    metadata:
+     name: myapp-pod
+     labels:
+       app: myapp
+       type: front-end
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+  replicas: 3
+
+
+replicaset-definition.yml
+
+apiVersion: apps/v1
+kind: Replicaset
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: myapp
+    type: front-end
+spec:    
+
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end (wich pod to monitor)
+SCALE:
+
+kubectl replace -f replicaset-definition.yml (si modif replicas par exp)
+
+kubectl scale --replicas=6 -f replicaset-definition.yml
+
+kubectl scale --replicas=6 -f replicaset myapp-replicaset
+  
