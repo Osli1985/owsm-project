@@ -96,13 +96,21 @@ Minikube start --vm-driver=hyperkit
 Kubectl:
 
 Kubectl get nodes
+
 Kubectl get pod
+
 Kubectl get services
+
 Kubectl create -h  exp : kubectl create deployment nginx-depl --image=nginx
+
 Kubectl get deployment
+
 Kubectl get replicaset
+
 Kubectl logs <pod-name>
+
 Kubectl exec -it <pod_name> -- bin/bash
+
 Kubectl delete deployment <pod_name>
 
 Kubectl apply -f <file_config>
