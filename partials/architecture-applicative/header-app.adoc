@@ -1,0 +1,14 @@
+:doc-type: book
+:toc-title: Sommaire
+:sectnumlevels: 5
+:setnums:
+:toclevels: 4
+:source-highlighter: highlightjs
+:icons: font
+:chapter-level:
+:stylesheet: ../../da-caa.css
+:toc:
+:table-caption!:
+:autofit-option:
+:appendix-caption: Annexe
+:experimental:

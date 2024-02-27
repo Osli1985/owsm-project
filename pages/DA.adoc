@@ -1,0 +1,56 @@
+include::../partials/header.adoc[]
+
+= Projet : Dossier D'architecture
+:author: Omar S
+
+== Inroduction
+[.text-justify]
+
+TIP: Ceci est un fichier au format ASCIIDOC
+
+dsfqsvdsfs
+dfsdfdsfd
+
+
+=== Principe du DA
+Ce document est le dossier d'architecture (DA) du projet :
+
+=== Contexte
+[.text-justify]
+
+Le projer consiste à ....
+
+=== Perimètre du dossier
+Le nouveau projet / logiciel permet de ....
+
+Ce DA décrit l'archi app / tech et
+
+=== Historique des projets implémentés
+
+|===
+|Date  | Description
+|08/24    |Lancement du projet
+|===
+
+
+<<<
+
+== Contexte d'architecture
+
+Décrit les besoins auxquels doit répondre l'application ainsi que son env. il doit faire l'inventaire de toutes les infos spécifiques à l'appli (besoins métier / non fonctionnels , archi fonct...
+
+
+Le projet vise à ...
+
+=== Besoins non fonctionnels
+
+perf , **Disponibilité** , intégrité , confidentialité , preuve maintenabilité (DICP) , sécurité , opérabilité , volumétrie ...
+
+==== Déploiement
+
+==== Logs & Metriques
+
+
+
+
+include::../partials/architecture-applicative/index.adoc[]

@@ -1,0 +1,21 @@
+include::header-app.adoc[]
+
+==Architecture applicative et logiciel
+
+L'architecture applicative est la structuration du système d'information en bloc applicatifs communicants au travers des flux. +
+Le bloc applicatif est un ensemble cohérent de composants logiciels au regard des développements informatiques et de la gouvernance participant à l'automatisation des fonctions.
+
+=== Vue globale
+
+image::../assets/images/vus.png[]
+
+====Schéma d'architecture
+
+image::../assets/images/schema.png[]
+
+===== Tableau des flux
+[cols="^1,3,3,2,2,3,3" options="header"]
+|===
+|N°  |Source  |Destination  |Protocole  |Format   |Description Flux
+|(1)
+|===

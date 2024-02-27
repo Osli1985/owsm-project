@@ -1,0 +1,27 @@
+:doc-type: book
+:toc-tittle: Sommaire
+:sectnumlevels: 5
+:sectnums:
+:toclevels: 4
+:imagesdir: ../assets/images
+:source-highlighter: highlightjs
+:icons: font
+:chapter-label:
+:stylesheet: ../da-caa.css
+:plantuml-server-url:
+ifdef::backend-pdf[]
+
+:pdf-themesdir: ./pdf/pdf-theme
+:title-page:
+:pdf-theme: custom
+:title-logo-image: image: jljlkjlk.svg[pdfwidth=60%,align=center]
+:pdf-fontsdir: {pdf-themesdir}
+:text-alignment: justify
+:source-highlighter: rouge
+:rouge-style: github
+endif::[]
+:toc:
+:table-caption!:
+:autofit-option:
+:appendix-caption: Annexe
+:experimental:

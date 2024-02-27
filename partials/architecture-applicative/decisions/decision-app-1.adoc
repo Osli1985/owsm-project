@@ -1,0 +1,11 @@
+include::../header-app.adoc[]
+
+==== Décision APP 1 : Développer une nouvelle ...
+
+[cols=2*]
+|===
+|*Décision*             |Développer un nouveau ...
+|*Motivation*           |La raison ...
+|*Implication*          |Commander une nouvelle machine
+|*Solutions alternatives mises à côté*  |autres solutions proposées avant décision
+|===
