@@ -1,0 +1,51 @@
+@startuml
+autonumber
+title API
+
+'actor "Utilisateur" as User
+
+box #a6e4b6
+    participant "Application" as app
+end box
+box "GED" #F6C900
+    participant "GED E" as ged #FFFFFF
+    database "dépôt GED" as dep #FFFFFF
+end box
+box "N Azure" #LightBlue
+    participant "DataGateway" as gateway
+end box
+'User ->app
+alt inject OK
+activate app
+loop API
+app -> app : balayer les documents du PLI
+app -> ged : envoyer document / API
+activate ged
+ged -> ged : Stocker temperarement le document
+ged -> app : UUID
+end loop
+app -> ged : Création du PLI
+
+ged --> gateway : injecter le PLI
+gateway --> dep : Stocker le Pli en Ged
+ged --> app : injection OK
+deactivate ged
+
+
+else Injection KO
+
+    group Problème d'injection d'un document
+
+loop API
+app -> app : balayer les documents du PLI
+app -> app : extraire/parser les métadatas à partir de l'XML
+app -> ged : envoyer document / API
+activate ged
+ged -> ged : Stocker temperarement le document
+ged --> app : injection KO
+
+destroy ged
+ged -> ged : Purger les documents stockés
+end  loop
+end
+@enduml
